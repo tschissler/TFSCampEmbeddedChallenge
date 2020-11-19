@@ -32,4 +32,5 @@ pio test -e native
 ```
 This requires a locally installed g++ compiler. Alternatively you can execute the tests within a docker container (see above) that comes with all necessary tools.
 
-
+## Deployment
+You might find some helpful scripts in the _deploy folder.
