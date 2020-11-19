@@ -61,7 +61,7 @@ print ("########################################################################
 print ()
 print ("This tool is parsing test results from PlatformIO unit tests and converting into NUnit format")
 print ()
-print ("Usage: TestResultsParser.py <inputfile> <outputfile>")
+print ("Usage: python TestResultsParser.py <inputfile> <outputfile>")
 print ()
 
 print (sys.argv)
