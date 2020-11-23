@@ -3,6 +3,7 @@ param (
     [String] $binPath
 )
 
+# If esptool.py is not installed, you can install it by running "pip install esptool"
 esptool.py `
     --chip esp32 `
     --before default_reset `
