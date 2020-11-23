@@ -34,3 +34,10 @@ This requires a locally installed g++ compiler. Alternatively you can execute th
 
 ## Deployment
 You might find some helpful scripts in the _deploy folder.
+
+To flash the firmware on the device, the esptool can be used. This is isntalled together with PlatformIO or can be installed separately by running
+
+```bash
+pip install esptool
+```
+
