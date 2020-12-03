@@ -41,3 +41,25 @@ To flash the firmware on the device, the esptool can be used. This is installed 
 pip install esptool
 ```
 
+# Embedded Challenge
+Team GRUEN
+
+![PlatformIO CI](https://github.com/dichternebel/TFSCampEmbeddedChallenge/workflows/PlatformIO%20CI/badge.svg)
+
+# Unsere Loesung
+
+* Wir nuzten kein Docker, das kann das Team fuer lokales Entwickeln nutzen
+* Wir bauen, testen und deployen direkt auf den PI
+* Indem wir einen GitHub Runner auf dem PI laufen lassen, der auf eine Action im GitHub Projekt reagiert
+* Testfaelle werden als Anhang an den Build gehangen und sind im NUnit Format
+
+## Installation des Agenten auf dem PI
+mkdir actions-runner && cd actions-runner
+curl -O -L https://github.com/actions/runner/releases/download/v2.274.2/actions-runner-linux-arm-2.274.2.tar.gz
+tar xzf ./actions-runner-linux-arm-2.274.2.tar.gz
+
+## TODOs
+* Firmware Flash verhindern, wenn ein Test rot war
+* CI und CD klarer trennen
+* CI vielleicht gar nicht auf dem PI ausfuehren(?)
+
