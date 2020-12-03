@@ -24,6 +24,15 @@ jobs:
     - name: Run PlatformIO
       run: /home/pi/.local/bin/pio run
     - name: Run PlatformIO Test
-      run: /home/pi/.local/bin/pio test -e native
+      continue-on-error: true
+      run: /home/pi/.local/bin/pio test -e native > test.output
+    - name: Convert test results
+      run: python ./_deploy/TestResultsParser.py test.output test.xml
+    - uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: test.xml
+    - name: Cleanup test results
+      run: rm test.output && rm test.xml
     - name: Run Upload
       run: /home/pi/.local/bin/pio run --target upload
