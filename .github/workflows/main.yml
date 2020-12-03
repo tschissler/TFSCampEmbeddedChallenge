@@ -25,7 +25,5 @@ jobs:
       run: /home/pi/.local/bin/pio run
     - name: Run PlatformIO Test
       run: /home/pi/.local/bin/pio test -e native
-    - name: Publish Unit Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v1.6
     - name: Run Upload
       run: /home/pi/.local/bin/pio run --target upload
