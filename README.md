@@ -41,3 +41,4 @@ To flash the firmware on the device, the esptool can be used. This is isntalled 
 pip install esptool
 ```
 
+Test
